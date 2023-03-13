@@ -27,7 +27,6 @@ function ListEmployee() {
   return (
     <div className='container'>
         <h2 className='text-center'>Employees List</h2>
-        <Link to='/addEmployee' className='btn btn-primary mb-2'>Add Employee</Link>
         <table className='table table-bordered table-striped'>
             <thead>
                 <th>Employee Id</th>
@@ -44,13 +43,15 @@ function ListEmployee() {
                             <td> {employee.emailId} </td>
                             <td>
                                 <Link to={`/editEmployee/${employee.id}`} className='btn btn-info' >Update</Link>
-                                <button className='btn btn-danger' onClick={() => {deleteEmployees(employee.id)}} >Delete</button>
+                                <button className='btn btn-danger' onClick={() => {deleteEmployees(employee.id)}} 
+                                    style={{marginLeft:"10px"}}>Delete</button>
                             </td>
                         </tr> 
                     )
                 }
             </tbody>
         </table>
+        <Link to='/addEmployee' className='btn btn-primary mb-2'>Add Employee</Link>
     </div>
   )
 }

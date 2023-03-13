@@ -4,8 +4,8 @@ function HeaderComponent() {
   return (
     <div>
         <header>
-            <nav className='nav navbar-expand-md navbar-dark bg-dark'>
-                <h1 className='navbar-brand'>Employee Management Application</h1>
+            <nav className='nav navbar-expand-md navbar-light' style={{backgroundColor: "#e3f2fd"}}>
+                <h2 className='text-center'>Employee Management Application</h2>
             </nav>
         </header>
     </div>
